@@ -1,0 +1,25 @@
+body { background-image: url(background/fire.jpg); }
+a:link, a:visited,
+#nav a:hover, #nav a.current,
+.thead a:hover, .thead a:active,
+.tcat a:hover, .tcat a:active { color: #d6051a; }
+a:hover, a:active { color: #d5cb00; }
+/*
+a:link { color: #d6051a; }
+a:visited { color: #d6051a; }
+a:hover, a:active { color: #d5cb00; }
+#nav a:hover { color: #d6051a; }
+#nav a.current { color: #d6051a; }
+.thead a:hover, .thead a:active { color: #d6051a; }
+.tcat a:hover, .tcat a:active { color: #d6051a; }
+*/
+.trow_sep {
+	border-bottom-color: #d5cb00;
+	border-top-color: #d5cb00;
+	border-right-color: #d5cb00;
+	border-left-color: #d5cb00;
+}
+input.textbox:hover {
+	border: 1px solid #d5cb00;
+}
+.codeblock .title { border-bottom-color: #d6051a; }

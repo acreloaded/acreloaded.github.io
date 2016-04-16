@@ -1,0 +1,25 @@
+body { background-image: url(background/sweet.jpg); }
+a:link, a:visited,
+#nav a:hover, #nav a.current,
+.thead a:hover, .thead a:active,
+.tcat a:hover, .tcat a:active { color: #d31579; }
+a:hover, a:active { color: #d7b17f; }
+/*
+a:link { color: #d31579; }
+a:visited { color: #d31579; }
+a:hover, a:active { color: #d7b17f; }
+#nav a:hover { color: #d31579; }
+#nav a.current { color: #d31579; }
+.thead a:hover, .thead a:active { color: #d31579; }
+.tcat a:hover, .tcat a:active { color: #d31579; }
+*/
+.trow_sep {
+	border-bottom-color: #d7b17f;
+	border-top-color: #d7b17f;
+	border-right-color: #d7b17f;
+	border-left-color: #d7b17f;
+}
+input.textbox:hover {
+	border: 1px solid #d7b17f;
+}
+.codeblock .title { border-bottom-color: #d31579; }

@@ -1,0 +1,355 @@
+---
+title: Revision 2
+desc: Master-Server Rules Revision 2
+---
+<style scoped>
+#toc a:before {
+  content: counter(section);
+  display: inline-block;
+  position: relative;
+  width: 0;
+  right: 30px;
+}
+#toc a {
+  counter-increment: section;
+  display: block;
+  margin-left: 60px;
+}
+
+ol { list-style-type: none; }
+section:before { content: "(" counter(section) ") "; }
+section { counter-increment: section; }
+section ol > li:before { content: "(" counter(section2, lower-alpha) ") "; }
+section ol > li { counter-increment: section2; }
+section ol > li > ol > li:before {content: "(" counter(subsection, lower-roman) ") "; }
+section ol > li > ol > li { counter-increment: subsection; }
+
+section ol[start="3"] { counter-reset: section2 2; }
+section ol[start="4"] { counter-reset: section2 3; }
+</style>
+
+<div class="page-header">
+<h1>AssaultCube Reloaded Master-Server Rules</h1>
+</div>
+
+<div class="alert alert-danger" role="alert">Revision 2 expired on 2012-08-23. It was active from 2012-08-07 to 2012-08-22.</div>
+
+<h2>Preamble</h2>
+<p>In order to ensure a decent gaming experience for everyone, we have created some rules.
+These rules can and may change anytime. If you do not like these simple rules, find another master server.</p>
+<p>AssaultCube Reloaded, under the command of the AssaultCube Reloaded Task Force, enacts as follows:</p>
+
+<h2>Table of Contents</h2>
+<div id="toc" class="toc-msr-old">
+  <a href="#1">Interpretation</a>
+  <h3>Division 1 &mdash; Clients</h3>
+    <h4><a href="#2">Prohibited Actions</a></h4>
+    <a href="#3">Voting Actions</a>
+    <a href="#4">As Admin</a>
+    <a href="#5">Actions on Players (Administrative Actions)</a>
+    <a href="#6">Exceptions</a>
+  <h3>Division 2 &mdash; Servers</h3>
+    <h4>Modifications</h4>
+      <a href="#7">Source Code Mods</a>
+      <a href="#8">Gameplay Mods</a>
+      <a href="#9">Master-Server Functions</a>
+    <h4>Prohibitions</h4>
+      <a href="#10">Pushing Maps</a>
+    <h4>Restrictions</h4>
+      <a href="#11">Nickname Bans</a>
+  <h3>Division 3 &mdash; Auth Users</h3>
+    <h4>Abuse</h4>
+      <a href="#12">Auth Abuse in General</a>
+      <a href="#13">Deban Restrictions</a>
+      <a href="#14">Limitations</a>
+  <h3>Division 4 &mdash; Administrative Penalties</h3>
+    <a href="#15">Clients in Violation</a>
+    <a href="#16">Servers in Violation</a>
+</div>
+
+<h3 id="1">Interpretation</h3>
+
+<h2>Division 1 &mdash; Clients</h2>
+<section>
+  In this document,
+  <ol>
+    <li>The &ldquo;master-server&rdquo; refers to the official one in operation by this site.</li>
+    <li>A &ldquo;server&rdquo; is software that connects clients, registered on the master-server.</li>
+    <li>
+      A &ldquo;client&rdquo; means someone that is either
+      <ol>
+        <li>playing,</li>
+        <li>spectating, or</li>
+        <li>otherwise connected</li>
+      </ol>
+      on a server connected to the master-server.
+    </li>
+    <li>An &ldquo;auth user&rdquo; is someone that has the privilege on the master-server to gain special access to its servers.</li>
+  </ol>
+</section>
+
+<h3 id="2">Prohibited Actions</h3>
+<section>
+  Except as provided in this division,
+  every client, that is connected to any server registered under the master-server
+  shall not do any of the following:
+  <ol>
+    <li>cheat<a href="#fn1" id="r1"><sup>1</sup></a> in any way that interferes with the gameplay of others;</li>
+    <li>spam or attempt to spam any server with unsolicited messages.</li>
+  </ol>
+</section>
+
+<h4 id="3">Voting Actions</h4>
+<section>Clients shall not abuse the voting functionality of the server.</section>
+
+<h4 id="4">As Admin</h4>
+<section>
+  An administrator shall not
+  <ol>
+    <li>
+      veto
+      <ol>
+        <li>a map vote, unless a minimum of 50% of the players have already voted for it,</li>
+        <li>an administrative vote, unless it is in accordance with section (5), or</li>
+        <li>any vote that causes advantage to the administrator, or</li>
+      </ol>
+    </li>
+    <li>abuse their privilege in any other way.</li>
+  </ol>
+</section>
+
+<h4 id="5">Actions on Players (Administrative Actions)</h4>
+<section>
+  An administrator of a server shall only force an action on a user by
+  <ol>
+    <li>
+      forcing that user to the enemy team, only if
+      <ol>
+        <li>
+          balancing the teams by moving a user from a larger team to a smaller team,
+          where the larger team has at least two players more than the smaller team,
+        </li>
+        <li>another user is swapped subsequently to switch players,</li>
+        <li>the server is running a gema map by forcing the users to one team,</li>
+        <li>the game-mode requires it, or</li>
+        <li>that user requests it and it is reasonable to do so,</li>
+      </ol>
+    </li>
+    <li>
+      kicking that user, only if that user
+      <ol>
+        <li>does anything mentioned in section (5), (c) to (d), or</li>
+        <li>uses excessive profanity, and has been warned at least once within the last two minute,</li>
+      </ol>
+    </li>
+    <li>
+      banning that user, only if that user
+      <ol>
+        <li>does anything mentioned in section (5)(d),</li>
+        <li>reconnects and continues to abuse the server with profanity, if the abuse is done within the same day, for a limit of 20 minutes,</li>
+        <li>abuses the voting system,</li>
+      </ol>
+    </li>
+    <li>
+      blacklisting, whether temporary or permanently, the user from the server, only if that user
+      <ol>
+        <li>uses cheats, and should optionally report that user to the master-server authority,</li>
+        <li>does anything that is in violation of the law the master-server is in, or</li>
+        <li>does anything that is in violation of the law the server is in.</li>
+      </ol>
+    </li>
+  </ol>
+</section>
+
+<h4 id="6">Exceptions</h4>
+<section>
+  Clients may do the following:
+  <ol>
+    <li>
+      notwithstanding section (2)(a), use cheats
+      <ol>
+        <li>that are fully prevented by the server, and</li>
+        <li>for the purpose of testing anti-cheat, provided that the server has anti-cheat in development, and not on a production server.</li>
+      </ol>
+    </li>
+    <li>
+      call votes to
+      <ol>
+        <li>perform administrative actions in accordance with section (5), or</li>
+        <li>perform general actions.</li>
+      </ol>
+    </li>
+  </ol>
+</section>
+
+<h2>Division 2 &mdash; Servers</h2>
+
+<h3>Modifications</h3>
+
+<h4 id="7">Source Code Mods</h4>
+<section>All modifications to the source code shall be labelled in the server description.</section>
+
+<h4 id="8">Gameplay Mods</h4>
+<section>
+  All gameplay modifications shall
+  <ol>
+    <li>be allowed by the administrators of the master-server,</li>
+    <li>be labelled clearly in the server description,</li>
+    <li>
+      have no advantage, unless
+      <ol>
+        <li>that advantage is provided equally to everyone, and</li>
+        <li>shall run with native code or shall have instructions regarding its usage, and</li>
+      </ol>
+    </li>
+    <li>override the regulation set in section (7) and only be labelled once.</li>
+  </ol>
+</section>
+
+<h4 id="9">Master-Server Functions</h4>
+<section>
+  No server shall override the master-server API, including but not limited to the
+  <ol>
+    <li>registration ping,</li>
+    <li>connect checks, and</li>
+  </ol>
+</section>
+
+<h3>Prohibitions</h3>
+
+<h4 id="10">Pushing Maps</h4>
+<section>Servers are allowed to push maps with its map rotation. This may be changed in the future.</section>
+
+<h3>Restrictions</h3>
+
+<h4 id="11">Nickname Bans</h4>
+<section>
+  A server shall use its nickname blacklist, only to
+  <ol>
+    <li>block profane names,</li>
+    <li>block clan tags that cause repetitive harm, or</li>
+    <li>restrict clan tags that the server has agreements with</li>
+  </ol>
+  <p>but shall not use it to</p>
+  <ol start="4">
+    <li>
+      block the use of generic clan tags pursuant to
+      those listed at <a href="http://forum.acr.victorz.ca/thread-219.html">http://forum.acr.victorz.ca/thread-219.html</a>, or
+    </li>
+    <li>prevent a large scope of players from connecting<a href="#fn2" id="r2"><sup>2</sup></a>.</li>
+  </ol>
+</section>
+
+<h2>Division 3 &mdash; Auth Users</h2>
+
+<h3>Abuse</h3>
+
+<h4 id="12">Auth Abuse in General</h4>
+<section>Auth users shall not abuse their auth privileges in general<a href="#fn3" id="r3"><sup>3</sup></a>.</section>
+
+<h4 id="13">Deban Restrictions</h4>
+<section>Auth users shall not use their deban access to unban themselves from a ban that is given in accordance with this document.</section>
+
+<h4 id="14">Limitations</h4>
+<section>Auth users are subjected and restricted to the same limitations as those described in section (4).</section>
+
+<h2>Division 4 &mdash; Administrative Penalties</h2>
+
+<h3 id="15">Clients in Violation</h3>
+<section>
+  Any client found to be
+  <ol>
+    <li>in violation of sections (2) to (6), or</li>
+    <li>using auth in violation of sections (12) to (14)</li>
+  </ol>
+  <p>is subject to these penalties for the</p>
+  <ol start="3">
+    <li>
+      first offence:
+      <ol>
+        <li>an immediate ban of two months that</li>
+        <li>can be removed upon appeal, immediately,</li>
+      </ol>
+    </li>
+    <li>
+      second offence within one year:
+      <ol>
+        <li>an immediate ban at least six months, but</li>
+        <li>not exceeding ten months, and that</li>
+        <li>can be removed upon appeal, after three months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      third offence within two years:
+      <ol>
+        <li>an immediate ban of at least nine months, but</li>
+        <li>not exceeding three years, and that</li>
+        <li>can be removed upon appeal, after six months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      where all bans for violations described in section (15)(a)
+      <ol>
+        <li>affect every server connected to the master-server, by barring the client from it,</li>
+        <li>prevents the client from registering a server on the master-server, and</li>
+        <li>can be immediately removed if the offence is no longer possible to reproduce, and</li>
+      </ol>
+    </li>
+    <li>
+      where all bans for violations described in section (15)(b)
+      <ol>
+        <li>disable access for auth with the client’s identification and authorization information,</li>
+        <li>restore the access when the penalty expires, and</li>
+        <li>can be immediately removed if the offence is no longer possible to reproduce.</li>
+      </ol>
+    </li>
+    <li>In the case that multiple sections apply regarding the penalty, the latter section shall have effect.</li>
+  </ol>
+</section>
+
+<h3 id="16">Servers in Violation</h3>
+<section>
+  Any server found to be in violation of sections (7) to (11), shall face the following penalties:
+  <ol>
+    <li>
+      for the first offence:
+      <ol>
+        <li>an immediate ban of two months that</li>
+        <li>can be removed upon appeal, immediately,</li>
+      </ol>
+    </li>
+    <li>
+      for a second offence within two years:
+      <ol>
+        <li>an immediate ban of one year, but</li>
+        <li>can be removed upon appeal, after six months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      for a third offence within five years:
+      <ol>
+        <li>an immediate ban of two years, but</li>
+        <li>can be removed upon appeal, after nine months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      where all bans
+      <ol>
+        <li>prevent the server from registering on the master-server, by barring it, but</li>
+        <li>does not prevent the banned identifier from playing as a client on other servers.</li>
+      </ol>
+    </li>
+    <li>In the case that multiple sections apply regarding the penalty, the latter section shall have effect.</li>
+  </ol>
+</section>
+
+<hr>
+<div>
+  <a id="fn1" href="#r1"><sup>1</sup></a>
+  Rank hacks do not qualify as cheating. There is no reason to prevent them; it just displays a number.<br>
+  <a id="fn2" href="#r2"><sup>2</sup></a>
+  such as restricting a single vowel from being used in a name<br>
+  <a id="fn3" href="#r3"><sup>3</sup></a>
+  They may not even claim privileges with auth without reason<br>
+</div>
+<hr>

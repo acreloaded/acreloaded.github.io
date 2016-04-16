@@ -1,0 +1,25 @@
+body { background-image: url(background/nature.jpg); }
+a:link, a:visited,
+#nav a:hover, #nav a.current,
+.thead a:hover, .thead a:active,
+.tcat a:hover, .tcat a:active { color: #81bf29; }
+a:hover, a:active { color: #369f98; }
+/*
+a:link { color: #81bf29; }
+a:visited { color: #81bf29; }
+a:hover, a:active { color: #369f98; }
+#nav a:hover { color: #81bf29; }
+#nav a.current { color: #81bf29; }
+.thead a:hover, .thead a:active { color: #81bf29; }
+.tcat a:hover, .tcat a:active { color: #81bf29; }
+*/
+.trow_sep {
+	border-bottom-color: #369f98;
+	border-top-color: #369f98;
+	border-right-color: #369f98;
+	border-left-color: #369f98;
+}
+input.textbox:hover {
+	border: 1px solid #369f98;
+}
+.codeblock .title { border-bottom-color: #81bf29; }

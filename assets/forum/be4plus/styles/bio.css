@@ -1,0 +1,25 @@
+body { background-image: url(background/bio.jpg); }
+a:link, a:visited,
+#nav a:hover, #nav a.current,
+.thead a:hover, .thead a:active,
+.tcat a:hover, .tcat a:active { color: #29887e; }
+a:hover, a:active { color: #e6cc5d; }
+/*
+a:link { color: #29887e; }
+a:visited { color: #29887e; }
+a:hover, a:active { color: #e6cc5d; }
+#nav a:hover { color: #29887e; }
+#nav a.current { color: #29887e; }
+.thead a:hover, .thead a:active { color: #29887e; }
+.tcat a:hover, .tcat a:active { color: #29887e; }
+*/
+.trow_sep {
+	border-bottom-color: #e6cc5d;
+	border-top-color: #e6cc5d;
+	border-right-color: #e6cc5d;
+	border-left-color: #e6cc5d;
+}
+input.textbox:hover {
+	border: 1px solid #e6cc5d;
+}
+.codeblock .title { border-bottom-color: #29887e; }

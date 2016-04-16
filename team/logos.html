@@ -1,0 +1,123 @@
+---
+title: Logos
+desc: Logos of AssaultCube Reloaded
+logos:
+  - id: victor
+    title: Logo by Victor
+    name: Victor
+    desc:
+      - type: success
+        head: Official Icon
+        body: This logo is the official AssaultCube Reloaded logo.
+      - type: warning
+        head: License
+        body: This logo might be copyright ineligible. If not, the author, Victor, releases it under CC BY-NC-SA 4.0.
+    dl:
+      - title: Icon
+        links:
+          - [victor.png, Rasterized 256&times;256 (.png)]
+          - [victor.svg, "Vector 1:1 (.svg)"]
+          - [victor.ai, Source (.ai)]
+    thumbnail: victor.png
+  - id: victor-metro
+    title: Metro Logo by Victor
+    name: Victor (Metro)
+    desc:
+      - type: default
+        head: Description
+        body: This logo is the official team logo (the AssaultCube Reloaded Task Force logo).
+      - type: warning
+        head: License
+        body: Possibly copyright ineligible. If not, the author, Victor, releases it under CC BY-NC-SA 4.0.
+    dl:
+      - title: Icon
+        links:
+          - [victor-metro.png, Rasterized 256&times;256 (.png)]
+          - [victor-metro.svg, "Vector 1:1 (.svg)"]
+          - [victor-metro.ai, Source (.ai)]
+    thumbnail: victor-metro.png
+  - id: orwek
+    title: Logo by orwek
+    name: orwek
+    desc:
+      - type: default
+        head: Description
+        body: This was created by a forum member.
+      - type: warning
+        head: License
+        body: Possibly copyright ineligible. Copyright &copy; 2012 orwek. All rights reserved.
+    dl:
+      - title: Icon
+        links:
+          - [orwek.png, Rasterized 256&times;256 (.png)]
+    thumbnail: orwek.png
+  - id: think3r
+    title: Logo by Think3r
+    name: Think3r
+    desc:
+      - type: default
+        head: Description
+        body: This was created by a forum member.
+      - type: warning
+        head: License
+        body: Copyright &copy; 2012 Think3r. All rights reserved.
+    dl:
+      - title: Images
+        links:
+          - [think3r.png, Icon 169&times;237 (.png)]
+          - [think3r_large.png, Large 525&times;165 (.png)]
+    thumbnail: think3r.png
+  - id: legacy
+    title: Legacy Logo by Victor
+    name: Legacy
+    desc:
+      - type: danger
+        head: License
+        body: The copyright status is unknown. This will be removed soon.
+    dl:
+      - title: Images
+        links:
+          - [legacy.png, Icon 256&times;256 (.png)]
+          - [legacy_full.png, Full 1563&times;813 (.png)]
+    thumbnail: legacy.png
+---
+<div class="page-header">
+<h1>Logos</h1>
+</div>
+
+<h2>List</h2>
+<ul>
+  {% for logo in page.logos %}
+  <li><a href="#{{ logo.id }}">{{ logo.name }}</a></li>
+  {% endfor %}
+</ul>
+
+{% for logo in page.logos %}
+<h2 id="{{ logo.id }}">{{ logo.title }}</h2>
+<div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-9">
+    {% for d in logo.desc %}
+    <div class="panel panel-{{ d.type }}">
+      <div class="panel-heading">{{ d.head }}</div>
+      <div class="panel-body">{{ d.body }}</div>
+    </div>
+    {% endfor %}
+    {% for dl in logo.dl %}
+    <div class="panel panel-primary">
+      <div class="panel-heading">Download {{ dl.title }}</div>
+      <div class="panel-body">
+        <div class="btn-group btn-group-justified" role="group">
+          {% for link in dl.links %}
+          <a href="{{ site.baseurl }}/assets/acr/logos/{{ link[0] }}" role="button" class="btn btn-default">{{ link[1] }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="col-xs-6 col-sm-4 col-md-3 thumbnail">
+    <img src="{{ site.baseurl }}/assets/acr/logos/{{ logo.thumbnail }}" class="thumbnail-logo" alt="">
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,25 @@
+body { background-image: url(background/space.jpg); }
+a:link, a:visited,
+#nav a:hover, #nav a.current,
+.thead a:hover, .thead a:active,
+.tcat a:hover, .tcat a:active { color: #3394be; }
+a:hover, a:active { color: #a467b9; }
+/*
+a:link { color: #3394be; }
+a:visited { color: #3394be; }
+a:hover, a:active { color: #a467b9; }
+#nav a:hover { color: #3394be; }
+#nav a.current { color: #3394be; }
+.thead a:hover, .thead a:active { color: #3394be; }
+.tcat a:hover, .tcat a:active { color: #3394be; }
+*/
+.trow_sep {
+	border-bottom-color: #a467b9;
+	border-top-color: #a467b9;
+	border-right-color: #a467b9;
+	border-left-color: #a467b9;
+}
+input.textbox:hover {
+	border: 1px solid #a467b9;
+}
+.codeblock .title { border-bottom-color: #3394be; }

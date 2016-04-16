@@ -1,0 +1,429 @@
+---
+title: Revision 4
+desc: Master-Server Rules Revision 4
+---
+<style scoped>
+#toc a:before {
+  content: counter(section);
+  display: inline-block;
+  position: relative;
+  width: 0;
+  right: 30px;
+}
+#toc a {
+  counter-increment: section;
+  display: block;
+  margin-left: 60px;
+}
+
+ol { list-style-type: none; }
+section:before {
+  content: counter(section) " ";
+  font-weight: bold;
+  font-size: 1.4em;
+}
+section { counter-increment: section; }
+section ol > li:before { content: "(" counter(section2, lower-alpha) ") "; }
+section ol > li { counter-increment: section2; }
+section ol > li > ol > li:before {content: "(" counter(subsection, lower-roman) ") "; }
+section ol > li > ol > li { counter-increment: subsection; }
+section ol > li > ol > li.rev:before {content: "(" counter(subsection, lower-roman) "." counter(subsectionRevision) ") "; }
+section ol > li > ol > li.rev { counter-increment: subsectionRevision; }
+
+section ol[start="3"] { counter-reset: section2 2; }
+section ol[start="4"] { counter-reset: section2 3; }
+</style>
+
+<div class="page-header">
+<h1>AssaultCube Reloaded Master-Server Rules</h1>
+</div>
+
+<div class="alert alert-danger" role="alert">Revision 4 expired on 2014-08-08. It was active from 2013-06-01 to 2014-08-07.</div>
+
+<h2>Preamble</h2>
+<p>In order to ensure a decent gaming experience for everyone, we have created some rules.
+These rules can and may change anytime.
+If you do not like these simple rules, find another master server.
+AssaultCube Reloaded, under the command of the AssaultCube Reloaded Task Force, enacts as follows:</p>
+
+<h2>Table of Contents</h2>
+<div id="toc" class="toc-msr-old">
+  <h3>Preamble</h3>
+  <a href="#1">Interpretation</a>
+  <h3>Division 1 &mdash; Clients</h3>
+  <a href="#2">Cheating</a>
+  <a href="#3">Abusing Admin</a>
+  <a href="#4">Auth Users</a>
+  <h3>Division 2 &mdash; Servers</h3>
+  <a href="#5">Modifications</a>
+  <a href="#6">Pushing Maps/Unvarying Map Rotation</a>
+  <a href="#7">Server Advertising</a>
+  <a href="#8">Nickname Ban Restrictions</a>
+  <a href="#9">Master-Server Functions</a>
+  <h3>Division 3 &mdash; Administrative Penalties</h3>
+  <a href="#10">Abuse of Admin by Server Operators</a>
+  <a href="#11">Clients in Violation</a>
+  <a href="#12">Servers in Violation</a>
+  <a href="#13">Special Bans/Exceptions</a>
+  <a href="#14">Evasion</a>
+  <a href="#15">Level of Proof</a>
+  <a href="#16">Appeals</a>
+  <h3>Division 4 &mdash; Schedule</h3>
+  <a href="#17">Schedule</a>
+  <a href="#18">Expiry</a>
+</div>
+
+<h3 id="1">Interpretation</h3>
+<section>
+  In this document,
+  <ol>
+    <li>
+      The &ldquo;master-server&rdquo; refers to the official service, on which servers are registered,
+      in operation by AssaultCube Reloaded.
+    </li>
+    <li>A &ldquo;server&rdquo; is software to which clients connect and is registered on the master-server.</li>
+    <li>
+      A &ldquo;client&rdquo; means AssaultCube Reloaded
+      when it is run in an interactive mode and connected to a server,
+      which is registered the master-server.
+    </li>
+    <li>
+      An &ldquo;auth user&rdquo; is someone with the privilege on the master-server
+      to gain special access to its servers.
+    </li>
+  </ol>
+</section>
+
+<h2>Division 1 &mdash; Clients</h2>
+
+<h3 id="2">Cheating</h3>
+<section>
+  Every client that is connected to any server registered under the master-server
+  shall not be modified in any way as to
+  <ol>
+    <li>provide any advantage (cheat) to that client over another client</li>
+    <li>otherwise interfere with other clients&rsquo; gameplay</li>
+  </ol>
+  <p>unless</p>
+  <ol start="3">
+    <li>that cheat is fully prevented by the server, or</li>
+    <li>
+      the cheating is for the purpose of testing anti-cheat, when
+      <ol>
+        <li>the server is labelled with &ldquo;development&rdquo; or anything that refers to anti-cheat development,</li>
+        <li>the cheating is immediately stopped at the request of an admin, and</li>
+        <li class="rev">strictly never on a production server.</li>
+      </ol>
+    </li>
+  </ol>
+</section>
+
+<h3 id="3">Abusing Admin</h3>
+<section>
+  (1) Every player using a client, who has any elevated privilege, shall not abuse his privilege, in general.<br>
+  (2) Administrators shall not veto votes that
+  <ol>
+    <li>provide advantage to them, or</li>
+    <li>change the map, unless a valid reason exists to do so.</li>
+  </ol>
+  (3) An administrator of a server shall only force an action on a user by
+  <ol>
+    <li>
+      forcing that user to the enemy team, only if
+      <ol>
+        <li>
+          balancing the teams by moving a user from a larger team to a smaller team
+          when the larger team has at least two players more than the smaller team,
+        </li>
+        <li>another user is swapped subsequently to switch players on a team,</li>
+        <li>the server is running a gema map by forcing the users to one team, and autoteam is disabled,</li>
+        <li>the game-mode requires it, or</li>
+        <li>that user requests it and it is reasonable to do so,</li>
+      </ol>
+    </li>
+    <li>
+      subduing or kicking that user, only if that user
+      <ol>
+        <li>does anything mentioned in section 3(3), (c) to (d), or</li>
+        <li>uses excessive profanity and has been warned at least once within the last two minutes,</li>
+      </ol>
+    </li>
+    <li>
+      banning that user, only if that user
+      <ol>
+        <li>violates this document regarding client rules,</li>
+        <li>does anything mentioned in section 3(3)(d),</li>
+        <li>
+          reconnects and continues to abuse the server with profanity,
+          if the abuse is done within the same day,
+          for a limit of 20 minutes,
+        </li>
+        <li>abuses the voting system, or</li>
+        <li>requests it,</li>
+      </ol>
+    </li>
+    <li>
+      blacklisting, whether temporary or permanently, the user from the server, only if that user
+      <ol>
+        <li>uses cheats, and should optionally report that user to the master-server authority,</li>
+        <li>does anything that is in violation of the law the master-server is in,</li>
+        <li>does anything that is in violation of the law the server is in, or</li>
+        <li>any other valid reason is present.</li>
+      </ol>
+    </li>
+  </ol>
+</section>
+
+<h3 id="4">Auth Users</h3>
+<section>
+  (1) No auth users shall abuse their privileges, as per the guidelines set out in section 3.<br>
+  (2) Auth users shall not use their deban access to unban themselves from a ban,
+    unless than ban is unreasonably given.
+</section>
+
+<h2>Division 2 &mdash; Servers</h2>
+
+<h3 id="5">Modifications</h3>
+<section>
+  (1) All code modifications shall be labelled in either the server description, extended info, or both.<br>
+  (2) No modifications shall modify the gameplay, unless it
+  <ol>
+    <li>provides no advantage, unless provided equally to everyone, and</li>
+    <li>
+      either
+      <ol>
+        <li>runs with native code, or</li>
+        <li>has instructions regarding its usage.</li>
+      </ol>
+    </li>
+  </ol>
+</section>
+
+<h3 id="6">Pushing Maps/Unvarying Map Rotation</h3>
+<section>Servers are allowed to push maps in its map rotation. This might be changed in the future.</section>
+
+<h3 id="7">Server Advertising</h3>
+<section>
+  (1) Servers shall not have
+  <ol>
+    <li>a server description<a href="#fn1" id="r1"><sup>1</sup></a>, or</li>
+    <li>a message of the day (MOTD),</li>
+  </ol>
+  <p>that advertises any website or service.</p>
+  (2) Notwithstanding section 6(1), a server may advertise a website for
+  <ol>
+    <li>an AssaultCube Reloaded clan, or</li>
+    <li>a public tournament for AssaultCube Reloaded, or</li>
+    <li>anything approved by the AssaultCube Reloaded Task Force.</li>
+  </ol>
+  (3) No person shall run an unreasonable amount of servers<a href="#fn2" id="r2"><sup>2</sup></a>
+    exceeding ten servers for the purpose of advertising his name through the server description.
+</section>
+
+<h3 id="8">Nickname Ban Restrictions</h3>
+<section>
+  A server&rsquo;s nickname blacklist shall be used only to
+  <ol>
+    <li>block profane names,</li>
+    <li>block clan tags that cause repetitive harm, or</li>
+    <li>restrict clan tags and reserve them for players with whom the server has agreements,</li>
+  </ol>
+  <p>but shall not use it to</p>
+  <ol start="4">
+    <li>
+      block the use of generic clan tags
+      pursuant to those listed at
+      <a href="http://forum.acr.victorz.ca/thread-219.html">http://forum.acr.victorz.ca/thread-219.html</a>, or
+    </li>
+    <li>prevent an unreasonably large scope of players from connecting.</li>
+  </ol>
+</section>
+
+<h3 id="9">Master-Server Functions</h3>
+<section>
+  No server shall override the master-server API, including but not limited to the
+  <ol>
+    <li>registration ping,</li>
+    <li>connect checks, and</li>
+    <li>auth requests and verifications.</li>
+  </ol>
+</section>
+
+<h2>Division 3 &mdash; Administrative Penalties</h2>
+
+<h3 id="10">Abuse of Admin by Server Operators<a href="#fn3" id="r3"><sup>3</sup></a></h3>
+<section>
+  Any server with admin abuse as described in section 3, which can be proven to have been done by
+  <ol>
+    <li>the server owner,</li>
+    <li>a member of the clan that the server serves, or</li>
+    <li>any player for whom the server owner has appointed a password,</li>
+  </ol>
+  <p>is guilty of admin abuse by its operators, and</p>
+  <ol start="4">
+    <li>
+      the offence of the client or clients shall be
+      <ol>
+        <li>completely waived and ignored for it/them, and</li>
+        <li>transferred to the server and considered a server violation.</li>
+      </ol>
+    </li>
+  </ol>
+</section>
+
+<h3 id="11">Clients in Violation</h3>
+<section>
+  (1) Every client that violates sections 2 to 4 is guilty of an offence subject to these penalties for the
+  <ol>
+    <li>
+      third offence within two years:
+      <ol>
+        <li>an immediate ban of at least nine months, but</li>
+        <li>not exceeding three years, and that</li>
+        <li>can be removed upon appeal, after six months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      second offence within one year:
+      <ol>
+        <li>an immediate ban at least six months, but</li>
+        <li>not exceeding ten months, and that</li>
+        <li>can be removed upon appeal, after three months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      first offence:
+      <ol>
+        <li>an immediate ban of two months that</li>
+        <li>can be removed upon appeal, immediately,</li>
+      </ol>
+    </li>
+    <li>
+      where all bans for violations described in sections 2-3
+      <ol>
+        <li>affect every server connected to the master-server, by barring the client from it,</li>
+        <li>prevents the client from registering a server on the master-server, and</li>
+        <li>can be immediately removed if the offence is no longer possible to reproduce, and</li>
+      </ol>
+    </li>
+    <li>
+      where all bans for violations described in section 4
+      <ol>
+        <li>disable access for auth with the client&rsquo;s identification and authorization information,</li>
+        <li>restore the access when the penalty expires, and</li>
+        <li>can be immediately removed if the offence is no longer possible to reproduce.</li>
+      </ol>
+    </li>
+  </ol>
+  (2) In the case that multiple subsections apply regarding the penalty,
+    the former subsection shall have effect.
+</section>
+
+<h3 id="12">Servers in Violation</h3>
+<section>
+  (1) Every server that is in violation of sections 5-10 is punishable by these penalties for the
+  <ol>
+    <li>
+      for a third offence within five years:
+      <ol>
+        <li>an immediate ban of two years, but</li>
+        <li>can be removed upon appeal, after nine months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      for a second offence within two years:
+      <ol>
+        <li>an immediate ban of one year, but</li>
+        <li>can be removed upon appeal, after six months has been served,</li>
+      </ol>
+    </li>
+    <li>
+      for the first offence:
+      <ol>
+        <li>an immediate ban of two months that</li>
+        <li>can be removed upon appeal, immediately,</li>
+      </ol>
+    </li>
+    <li>
+      where all bans
+      <ol>
+        <li>prevent the server from registering on the master-server, by barring it, but</li>
+        <li>does not prevent the banned identifier from playing as a client on other servers.</li>
+      </ol>
+    </li>
+  </ol>
+  (2) In the case that multiple subsections apply regarding the penalty,
+    the former subsection shall have effect.
+</section>
+
+<h3 id="13">Special Bans/Exceptions</h3>
+<section>
+  (1) If a large range ban affects an innocent player,
+  AssaultCube Reloaded may assign deban auth passwords
+  to that user for that purpose.<br>
+  (2) AssaultCube Reloaded may, for any reason, ban any client or server, if
+  <ol>
+    <li>they deem it is necessary to do so, or</li>
+    <li>there is reasonable cause not defined here,</li>
+  </ol>
+  <p>and</p>
+  <ol start="3">
+    <li>at least 60% of them vote, or</li>
+    <li>a public poll succeeds with at least 55%</li>
+  </ol>
+  <p>in favor of that ban.</p>
+</section>
+
+<h3 id="14">Evasion</h3>
+<section>
+  If a barred player attempts to circumvent his ban by
+  <ol>
+    <li>changing his IP address at least twice, or</li>
+    <li>spoofing his GUID,</li>
+  </ol>
+  his ban shall be extended by 21 days.
+</section>
+
+<h3 id="15">Level of Proof</h3>
+<section>
+  In order for a player to be guilty, it is not necessary to prove to <i>mens rea</i> of an offence.
+  However, it must be proven beyond a reasonable doubt that the <i>actus reus</i> has occurred.
+</section>
+
+<h3 id="16">Appeals</h3>
+<section>
+  (1) Upon an appeal, if the person is not qualified to make the appeal,
+    the length of the ban shall be extended by 14 days.<br>
+  (2) If an appeal can prove that a ban was assigned in error,
+    the player on whom the ban had effect shall be unbanned forthwith.
+</section>
+
+<h2>Division 4 &mdash; Schedule</h2>
+
+<h3 id="17">Schedule</h3>
+<section>
+  (1) This document enters into force on June 1, 2012.<br>
+  (2) The latest possible document covering the timespan required shall be used in rulings.
+</section>
+
+<h3 id="18">Expiry</h3>
+<section>
+  For the purpose of allowing future review and revisions, this document expires
+  <ol>
+    <li>on June 15, 2018, or</li>
+    <li>when a newer version is available,</li>
+  </ol>
+  whichever is earlier.
+</section>
+
+<hr>
+<div>
+  <a id="fn1" href="#r1"><sup>1</sup></a>
+  This does not apply to extended server information.<br>
+  <a id="fn2" href="#r2"><sup>2</sup></a>
+  Providing an excellent service for the community is good, but spamming 20+ servers is different.
+  If some servers are popular, running more of them can be reasonable.<br>
+  <a id="fn3" href="#r3"><sup>3</sup></a>
+  This regulation allows admin abuse servers to be punished, and still allow that admin to play on other servers.<br>
+</div>
+<hr>

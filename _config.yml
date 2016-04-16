@@ -1,0 +1,8 @@
+baseurl: /new_site
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "pages"
+edit_prefix: https://github.com/acreloaded/new_site/edit/gh-pages/

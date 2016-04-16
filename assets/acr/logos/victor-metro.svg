@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="ACR_1:1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="14.409" y="16.024" width="167.182" height="191.953">
+		<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+		<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="14.409" y="16.024" width="167.182" height="191.953" id="Cube_2_">
+	<g filter="url(#Adobe_OpacityMaskFilter)">
+		<g id="Cube_1_">
+			<g>
+				<g id="Outer_Cube_8_">
+					<g>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							181.049,64.128 97.729,16.023 14.95,64.13 98.271,112.234 181.049,64.128 						"/>
+						<polygon fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							14.409,159.869 14.68,64.129 98,112.234 97.729,207.977 						"/>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							181.319,64.128 98,112.232 98.272,207.977 181.591,159.869 181.319,64.128 						"/>
+					</g>
+					<g>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							181.049,64.128 97.729,16.023 14.95,64.13 98.271,112.234 181.049,64.128 						"/>
+						<polygon fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							14.409,159.869 14.68,64.129 98,112.234 97.729,207.977 						"/>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							181.319,64.128 98,112.232 98.272,207.977 181.591,159.869 181.319,64.128 						"/>
+					</g>
+					<g>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							181.049,64.128 97.729,16.023 14.95,64.13 98.271,112.234 181.049,64.128 						"/>
+						<polygon fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							14.409,159.869 14.68,64.129 98,112.234 97.729,207.977 						"/>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							181.319,64.128 98,112.232 98.272,207.977 181.591,159.869 181.319,64.128 						"/>
+					</g>
+				</g>
+				<g id="Inner_Cube_8_">
+					<g>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							163.421,74.523 97.786,36.628 32.577,74.524 98.213,112.419 163.421,74.523 						"/>
+						<polygon fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							32.15,149.943 32.364,74.524 98,112.419 97.786,187.84 						"/>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							163.637,74.523 98,112.418 98.214,187.84 163.85,149.943 163.637,74.523 						"/>
+					</g>
+					<g>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							163.421,74.523 97.786,36.628 32.577,74.524 98.213,112.419 163.421,74.523 						"/>
+						<polygon fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							32.15,149.943 32.364,74.524 98,112.419 97.786,187.84 						"/>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							163.637,74.523 98,112.418 98.214,187.84 163.85,149.943 163.637,74.523 						"/>
+					</g>
+					<g>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							163.421,74.523 97.786,36.628 32.577,74.524 98.213,112.419 163.421,74.523 						"/>
+						<polygon fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							32.15,149.943 32.364,74.524 98,112.419 97.786,187.84 						"/>
+						<polyline fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="
+							163.637,74.523 98,112.418 98.214,187.84 163.85,149.943 163.637,74.523 						"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</mask>
+<g id="Cube" mask="url(#Cube_2_)">
+	<g id="Outer_Cube">
+		<g>
+			<polyline fill="#C1272D" points="181.049,64.128 97.729,16.024 14.95,64.13 98.271,112.234 181.049,64.128 			"/>
+			<polygon fill="#C1272D" points="14.409,159.869 14.68,64.129 98,112.234 97.729,207.977 			"/>
+			<polyline fill="#C1272D" points="181.319,64.128 98,112.233 98.272,207.977 181.591,159.869 181.319,64.128 			"/>
+		</g>
+	</g>
+	<g id="Inner_Cube">
+		<g>
+			<polyline fill="#CE4952" points="163.421,74.524 97.786,36.628 32.577,74.525 98.213,112.419 163.421,74.524 			"/>
+			<polygon fill="#CE4952" points="32.15,149.943 32.364,74.524 98,112.419 97.786,187.84 			"/>
+			<polyline fill="#CE4952" points="163.637,74.524 98,112.418 98.214,187.84 163.85,149.943 163.637,74.524 			"/>
+		</g>
+	</g>
+</g>
+<g id="Plus">
+	<g>
+		<polygon fill="#8CC63F" points="246,168.2 194.8,168.2 194.8,117 169.2,117 169.2,168.2 118,168.2 118,193.8 169.2,193.8 
+			169.2,245 194.8,245 194.8,193.8 246,193.8 		"/>
+	</g>
+	<g>
+		<polygon fill="none" stroke="#39B54A" stroke-width="5" points="246,168.2 194.8,168.2 194.8,117 169.2,117 169.2,168.2 
+			118,168.2 118,193.8 169.2,193.8 169.2,245 194.8,245 194.8,193.8 246,193.8 		"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
