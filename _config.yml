@@ -1,4 +1,4 @@
-baseurl: /new_site
+baseurl:
 defaults:
   - scope:
       path: ""
