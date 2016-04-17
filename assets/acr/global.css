@@ -1,6 +1,6 @@
 body {
-	margin-top: 64px;
-	margin-bottom: 70px;
+	margin-top: 64px; /* for navbar */
+	margin-bottom: 70px; /* for sticky footer */
 }
 
 a.navbar-brand {
@@ -14,12 +14,11 @@ a.navbar-brand > img {
 	margin: 0 auto;
 }
 
-/*
+/* Sticky footer */
 html {
 	position: relative;
 	min-height: 100%;
 }
-*/
 .footer {
 	position: absolute;
 	bottom: 0;
