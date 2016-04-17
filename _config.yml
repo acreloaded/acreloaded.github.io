@@ -1,8 +1,8 @@
-baseurl:
+baseurl: ""
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "pages"
-edit_prefix: https://github.com/acreloaded/new_site/edit/gh-pages/
+edit_prefix: https://github.com/acreloaded/acreloaded.github.io/edit/master/
