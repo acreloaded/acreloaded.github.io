@@ -14,8 +14,14 @@ a.navbar-brand > img {
 	margin: 0 auto;
 }
 
+/*
+html {
+	position: relative;
+	min-height: 100%;
+}
+*/
 .footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
