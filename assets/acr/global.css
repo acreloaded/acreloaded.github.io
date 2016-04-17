@@ -13,15 +13,23 @@ a.navbar-brand > img {
 	margin: 0 auto;
 }
 
+/* Sticky footer */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px;
+}
 .footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	/* height: 60px; */
-	background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
 }
 
-
+/* Currently used only for /team/logos */
 img.thumbnail-logo {
 	background-color: #fff;
 	background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee), linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee);
