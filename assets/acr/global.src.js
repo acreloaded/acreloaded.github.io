@@ -24,10 +24,4 @@ $(function () {
   }
   // Invoke timeago
   $('.timeago').timeago()
-  // Check latest version
-  $.getJSON('https://api.github.com/repos/acreloaded/acr/releases?callback=?', function (data) {
-    var latest = data.data[0].name
-    if (latest.substr(0, 8) === 'Release ') latest = latest.substr(8)
-    $('#latest-version').text('ACR ' + latest)
-  })
 })
