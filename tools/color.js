@@ -8,18 +8,27 @@ function updatePreview () {
   var $stuff = $('<div>')
 
   var parts = ('_' + $('#txt').val()).split('\\f')
-  var stack = ['5']
+  var stack = [['5', false]]
   var sp = 0
   for (var i = 0, l = parts.length; i < l; ++i) {
-    if (parts[i].length < 2) continue
+    if (!parts[i].length) continue
 
-    if (parts[i][0] === 's') stack.push(stack[sp++])
-    else if (parts[i][0] === 'r' && sp) stack.pop()
-    else stack[sp] = parts[i][0]
+    if (parts[i][0] === 's') {
+      stack.push(stack[sp++])
+    } else if (parts[i][0] === 'r' && sp) {
+      stack.pop()
+      --sp
+    } else if (parts[i][0] === 'b') {
+      stack[sp][1] ^= true
+    } else {
+      stack[sp] = [parts[i][0], false]
+    }
+
+    if (parts[i].length < 2) continue
 
     var color = 'white'
     // copied from rendertext.cpp
-    switch (stack[sp]) {
+    switch (stack[sp][0]) {
       case '0': color = bvec(2, 255, 128); break   // green: player talk
       case '1': color = bvec(96, 160, 255); break   // blue: team chat
       case '2': color = bvec(255, 192, 64); break   // yellow: gameplay action messages, only actions done by players - 230 230 20 too bright
@@ -71,7 +80,11 @@ function updatePreview () {
       // white (provided color): everything else
       // default: color = bvec( 255, 255, 255 ); break;
     }
-    $stuff.append($('<span>').css('color', color).text(parts[i].slice(1)))
+    var $s = $('<span>').text(parts[i].slice(1))
+    if (stack[sp][1]) {
+      $s.addClass('b')
+    }
+    $stuff.append($s.css('color', color))
   }
 
   $('#preview').empty().append($stuff)

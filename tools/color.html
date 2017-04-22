@@ -11,6 +11,25 @@ desc: Visualize \f color codes
 </textarea>
 
 <h2>Preview</h2>
-<div id="preview" style="background: #ccc"></div>
+<div id="preview"></div>
+
+<style>
+#preview {
+  background: #ccc;
+  font-size: 24px;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+#preview .b {
+  animation: blink 628.3ms cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
+}
+@keyframes blink {
+  from   { opacity: 0 }
+  86.96% { opacity: 1 }
+}
+</style>
 
 <script src="color.js"></script>
