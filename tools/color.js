@@ -7,24 +7,37 @@ function bvec (r, g, b) {
 function updatePreview () {
   var $stuff = $('<div>')
 
-  var parts = ('_' + $('#txt').val()).split('\\f')
-  var stack = [['5', false]]
+  var parts = ('_' + $('#txt').val()).split('\\')
+  var stack = [['f5', false]]
   var sp = 0
   for (var i = 0, l = parts.length; i < l; ++i) {
     if (!parts[i].length) continue
 
-    if (parts[i][0] === 's') {
-      stack.push(stack[sp++])
-    } else if (parts[i][0] === 'r' && sp) {
-      stack.pop()
-      --sp
-    } else if (parts[i][0] === 'b') {
-      stack[sp][1] ^= true
-    } else {
-      stack[sp] = [parts[i][0], false]
+    var c = parts[i][0]
+    var codeLen = 1
+    if (c === 'n') {
+      $stuff.append($('<br>'))
+      continue
+    } else if (c === 'f') {
+      if (parts[i].length === 1) continue
+      c = parts[i][codeLen++]
+      // process color code
+      if (c === 's') {
+        stack.push(stack[sp++])
+      } else if (c === 'r') {
+        // ignore if stack is empty
+        if (sp) {
+          stack.pop()
+          --sp
+        }
+      } else if (c === 'b') {
+        stack[sp][1] ^= true
+      } else {
+        stack[sp] = [c, false]
+      }
     }
 
-    if (parts[i].length < 2) continue
+    if (parts[i].length < codeLen) continue
 
     var color = 'white'
     // copied from rendertext.cpp
@@ -34,7 +47,7 @@ function updatePreview () {
       case '2': color = bvec(255, 192, 64); break   // yellow: gameplay action messages, only actions done by players - 230 230 20 too bright
       case '3': color = bvec(255, 64, 64); break   // red: important errors and notes
       case '4': color = bvec(128, 128, 128); break   // gray
-      case '5': color = bvec(255, 255, 255); break   // white
+      // case '5': color = bvec(255, 255, 255); break   // white
       case '6': color = bvec(96, 48, 0); break   // dark brown
       case '7': color = bvec(153, 51, 51); break   // dark red: dead admin
       case '8': color = bvec(192, 64, 192); break   // magenta
@@ -80,7 +93,7 @@ function updatePreview () {
       // white (provided color): everything else
       // default: color = bvec( 255, 255, 255 ); break;
     }
-    var $s = $('<span>').text(parts[i].slice(1))
+    var $s = $('<span>').text(parts[i].slice(codeLen))
     if (stack[sp][1]) {
       $s.addClass('b')
     }
@@ -93,4 +106,5 @@ function updatePreview () {
 $(function () {
   // register event listener
   $('#txt').on('change keyup', updatePreview)
+  updatePreview()
 })
