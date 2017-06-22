@@ -1,5 +1,12 @@
 ---
 desc: A free-and-open-source first-person-shooter aimed at improving the classic game, AssaultCube!
+screenshots:
+  1: Bloody screen!
+  2: Quickscoped!
+  3: Iron sights
+  4: Frags can headshot!
+  5: Nade explosion lines
+  6: Scoreboard after death
 ---
 <div class="jumbotron">
   <div class="container">
@@ -40,6 +47,14 @@ desc: A free-and-open-source first-person-shooter aimed at improving the classic
 </div>
 
 <div class="container">
+
+{% for s in page.screenshots %}
+  <div class="col-xs-2" title="{{ s[0] }}. {{ s[1] }}">
+    <a href="https://a.fsdn.com/con/app/proj/assaultcuber/screenshots/{{ s[0] }}.png" class="thumbnail" target="_blank">
+      <img src="https://a.fsdn.com/con/app/proj/assaultcuber/screenshots/{{ s[0] }}.png/192/108" alt="{{s[1]}}">
+    </a>
+  </div>
+{% endfor %}
 
   <div class="col-xs-8 col-md-9">
     <p>AssaultCube Reloaded (ACR) is a free-and-open-source first-person-shooter. Formerly called AssaultCube Special Edition, it was created by the <a href="http://team.acr.victorz.ca">AssaultCube Reloaded Task Force</a> to improve AssaultCube.</p>
