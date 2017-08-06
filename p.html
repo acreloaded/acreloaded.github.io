@@ -1,5 +1,69 @@
 ---
-title: Promotion Package
-desc: Promote AssaultCube Reloaded!
+title: ACR for AC Players
+desc: why AssaultCube players should play and promote AssaultCube Reloaded!
+sections:
+  - heading: Features for AC Players
+    content:
+      - name: Classic Mutator
+        text: ACR has a mutator to make gameplay similar to the original AC.
+      - name: AC 1.1 Map Support
+        text: ACR supports v8 maps from AC.
+  - heading: Improvements <small>why ACR is better</small>
+    content:
+      - name: New, diverse game modes and mutators
+        text: Combining modes and mutators leads to many more possible game settings
+        class: col-sm-6 col-md-3
+      - name: Many new and different weapons
+        text: More ways to enjoy the game
+        class: col-sm-6 col-md-3
+      - name: More realistic gameplay
+        text: Damage fading over distance, bleeding, drowning
+        class: col-sm-6 col-md-3
+      - name: Less potential cheats
+        text: More server-sided code
+        class: col-sm-6 col-md-3
+      - name: Better voting system
+        text: Ignore neutral votes; veto admin votes after second press
+        class: col-sm-6 col-md-3
+      - name: Improved radar
+        text: showing explosions and shotlines
+        class: col-sm-6 col-md-3
+      - name: Killfeed
+        text: making it easy to see kills
+        class: col-sm-6 col-md-3
+      - name: Spawn enqueue/dequeue
+        text: unlike AC, no need to spam the spawn button
+        class: col-sm-6 col-md-3
+      - name: Chat improvements
+        text: separate chat and main consoles, unlike in AC, where many kill messages can hide the chat.
+        class: col-sm-6 col-md-3
+  - heading: Promotion Packages
+    content:
+      - name: Promotion Server
+        text: Run an AC server to promote ACR.
+      - name: Promotion Client
+        text: Play AC to promote ACR.
 ---
-Promotion
+<div class="jumbotron">
+  <h1>ACR <small>the replacement for AC</small></h1>
+  <div>
+    <p>AssaultCube Reloaded (ACR) is an improved version of AssaultCube (AC).</p>
+    <a href="." role="button" class="btn btn-primary">Get ACR now!</a>
+    <a href="https://github.com/acreloaded/promotion" role="button" class="btn btn-default">Promotion Server</a>
+    <a href="https://github.com/acreloaded/promotion_client" role="button" class="btn btn-default">Promotion Client</a>
+  </div>
+</div>
+
+{% for s in page.sections %}
+<h1>{{ s.heading }}</h1>
+<div class="row">
+  {% for c in s.content %}
+  <div class="{% if c.class %}{{ c.class }}{% else %}col-sm-6{% endif %}">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{ c.name }}</div>
+      <div class="panel-body"> {{ c.text }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
