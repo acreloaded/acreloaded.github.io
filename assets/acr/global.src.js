@@ -8,6 +8,7 @@ $(function () {
     prefixFromNow: null,
     suffixAgo: 'ago',
     suffixFromNow: 'from now',
+    inPast: 'any moment now',
     seconds: '%d seconds',
     minute: 'a minute',
     minutes: '%d minutes',

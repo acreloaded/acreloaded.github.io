@@ -8,6 +8,7 @@ sections:
         text: ACR has a mutator to make gameplay similar to the original AC.
       - name: AC 1.1 Map Support
         text: ACR supports v8 maps from AC.
+    columns: 2
   - heading: Improvements <small>why ACR is better</small>
     content:
       - name: New, diverse game modes and mutators
@@ -43,26 +44,25 @@ sections:
         text: Run an AC server to promote ACR.
       - name: Promotion Client
         text: Play AC to promote ACR.
+    columns: 2
 ---
 <div class="jumbotron">
-  <h1>ACR <small>the replacement for AC</small></h1>
+  <h1>ACR <small class="text-muted">the replacement for AC</small></h1>
   <div>
     <p>AssaultCube Reloaded (ACR) is an improved version of AssaultCube (AC).</p>
     <a href="." role="button" class="btn btn-primary">Get ACR now!</a>
-    <a href="https://github.com/acreloaded/promotion" role="button" class="btn btn-default">Promotion Server</a>
-    <a href="https://github.com/acreloaded/promotion_client" role="button" class="btn btn-default">Promotion Client</a>
+    <a href="https://github.com/acreloaded/promotion" role="button" class="btn btn-outline-primary">Promotion Server</a>
+    <a href="https://github.com/acreloaded/promotion_client" role="button" class="btn btn-outline-primary">Promotion Client</a>
   </div>
 </div>
 
 {% for s in page.sections %}
 <h1>{{ s.heading }}</h1>
-<div class="row">
+<div class="card-columns"{% if s.columns %} style="column-count:{{ s.columns }}"{% endif %}>
   {% for c in s.content %}
-  <div class="{% if c.class %}{{ c.class }}{% else %}col-sm-6{% endif %}">
-    <div class="panel panel-default">
-      <div class="panel-heading">{{ c.name }}</div>
-      <div class="panel-body"> {{ c.text }}</div>
-    </div>
+  <div class="card">
+    <div class="card-header">{{ c.name }}</div>
+    <div class="card-body"> {{ c.text }}</div>
   </div>
   {% endfor %}
 </div>

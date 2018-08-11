@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}AssaultCube Reloaded</title>
 
@@ -13,66 +12,62 @@
   {% endif %}
 
   {% assign url_prefix6 = page.url | slice: 0, 6 %}
-  <!-- {{ url_prefix6 }} -->
   {% if url_prefix6 == '/team/' %}
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/acr/favicon_team.ico">
   {% else %}
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/acr/favicon.ico">
   {% endif %}
 
-  <!-- CSS stylesheets -->
-  <!--<link rel="stylesheet" class="theme-switchable" href="{{ site.baseurl }}/assets/bootstrap/css/bootstrap.min.css" title="bootstrap">-->
-  <link rel="stylesheet" class="theme-switchable" href="{{ site.baseurl }}/assets/bootstrap/yeti.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap/yeti.min.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/acr/global.css">
-
-  <!-- JavaScript scripts -->
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <script src="{{ site.baseurl }}/assets/jquery/jquery-1.11.2.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/jquery/jquery.timeago.js"></script>
-  <script src="{{ site.baseurl }}/assets/acr/global.js"></script>
-  {% if page.url == '/' %}
-  <script type="text/javascript">
-  <!--
-    // SOPA script (second part was added to disable redirections)
-    if(window.location.search.indexOf('bypass=') == -1 && window.location.search.indexOf('sopatest=') != -1)
-      window.location.replace('sopa')
-  -->
-  </script>
-  {% endif %}
 </head>
 <body>
-  {% include navbar.html %}
+  <header>
+    {% include navbar.html %}
+  </header>
 
   {% unless page.url == '/' %}
   <div class="container">
   {% endunless %}
     {{ content }}
 
-    <script src="http://d.victorz.ca/a/acr_foot"></script>
+    <script src="//d.victorz.ca/a/acr_foot"></script>
 
-    <footer class="footer">
-      <div class="container">
-        <p>
-          Copyright &copy; 2010-{{ site.time | date: "%Y" }} the <a href="{{ site.baseurl }}/team/">AssaultCube Reloaded Task Force</a>.
-
-          Run by <a href="http://victorz.ca"><img src="//victorz.ca/assets/a/80-15.png" alt="Victor"/></a>,
-          this site was last generated
-          <span class="timeago" title="{{ site.time | date_to_xmlschema }}">on {{ site.time | date: "%A, %B %d, %Y" }}
-          at {{ site.time | date: site.format_time }}</span>.
-          It uses <a href="http://validator.w3.org/check?uri=referer">HTML 5</a> and
-          <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS 3</a>.
-
-          <script src="//d.victorz.ca/online.js?o=s"></script>
-        </p>
-      </div>
-    </footer>
   {% unless page.url == '/' %}
   </div> <!-- /container -->
   {% endunless %}
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Copyright &copy; 2010-{{ site.time | date: "%Y" }} the <a href="{{ site.baseurl }}/team/">AssaultCube Reloaded Task Force</a>.
+
+        <span class="text-muted">
+          Run by <a href="https://victorz.ca"><img src="//victorz.ca/assets/a/80-15.png" alt="Victor"/></a>,
+          this site was last generated
+          <span class="timeago" title="{{ site.time | date_to_xmlschema }}">{{ site.time }}</span>.
+          It uses <a href="https://validator.w3.org/check?uri=referer">HTML 5</a> and
+          <a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS 3</a>.
+        </span>
+
+        <script src="//d.victorz.ca/online.js?o=s"></script>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{{ site.baseurl }}/assets/jquery/jquery-3.3.1.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/jquery/jquery.timeago-1.6.1.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/acr/global.js"></script>
+  {% if page.url == '/' %}
+  <script type="text/javascript">
+    // SOPA script (second part was added to disable redirections)
+    if(window.location.search.indexOf('bypass=') == -1 && window.location.search.indexOf('sopatest=') != -1)
+      window.location.replace('sopa')
+  </script>
+  {% endif %}
+  {% if page.script_custom %}<script src="{{ page.script_custom }}"></script>{% endif %}
 </body>
 </html>

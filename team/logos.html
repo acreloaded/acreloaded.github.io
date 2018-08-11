@@ -97,18 +97,18 @@ logos:
 <div class="row">
   <div class="col-xs-6 col-sm-8 col-md-9">
     {% for d in logo.desc %}
-    <div class="panel panel-{{ d.type }}">
-      <div class="panel-heading">{{ d.head }}</div>
-      <div class="panel-body">{{ d.body }}</div>
+    <div class="card mb-4 border-{{ d.type }}">
+      <div class="card-header bg-{{ d.type }}{% if d.type != 'default' %} text-white{% endif %}">{{ d.head }}</div>
+      <div class="card-body">{{ d.body }}</div>
     </div>
     {% endfor %}
     {% for dl in logo.dl %}
-    <div class="panel panel-primary">
-      <div class="panel-heading">Download {{ dl.title }}</div>
-      <div class="panel-body">
-        <div class="btn-group btn-group-justified" role="group">
+    <div class="card mb-4 border-primary">
+      <div class="card-header bg-primary text-white">Download {{ dl.title }}</div>
+      <div class="card-body">
+        <div class="btn-group d-flex" role="group">
           {% for link in dl.links %}
-          <a href="{{ site.baseurl }}/assets/acr/logos/{{ link[0] }}" role="button" class="btn btn-default">{{ link[1] }}</a>
+          <a href="{{ site.baseurl }}/assets/acr/logos/{{ link[0] }}" role="button" class="btn btn-secondary w-100">{{ link[1] }}</a>
           {% endfor %}
         </div>
       </div>
