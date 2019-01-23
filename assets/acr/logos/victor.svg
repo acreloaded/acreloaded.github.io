@@ -1,69 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232.5 224.71">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
   <defs>
-    <style>
-      .cls-1 {
-        isolation: isolate;
-      }
-
-      .cls-2 {
-        fill: #c1272d;
-      }
-
-      .cls-3 {
-        fill: #fff;
-        opacity: 0.2;
-      }
-
-      .cls-4 {
-        opacity: 0.75;
-      }
-
-      .cls-4, .cls-9 {
-        mix-blend-mode: screen;
-      }
-
-      .cls-15, .cls-5 {
-        fill: none;
-      }
-
-      .cls-6 {
-        fill: url(#radial-gradient);
-      }
-
-      .cls-7 {
-        fill: url(#radial-gradient-2);
-      }
-
-      .cls-8 {
-        fill: url(#radial-gradient-3);
-      }
-
-      .cls-10 {
-        fill: url(#radial-gradient-4);
-      }
-
-      .cls-11 {
-        fill: url(#radial-gradient-5);
-      }
-
-      .cls-12 {
-        fill: url(#radial-gradient-6);
-      }
-
-      .cls-13 {
-        fill: url(#radial-gradient-7);
-      }
-
-      .cls-14 {
-        fill: #8cc63f;
-      }
-
-      .cls-15 {
-        stroke: #39b54a;
-        stroke-width: 5px;
-      }
-    </style>
-    <radialGradient id="radial-gradient" cx="99.49" cy="119.94" r="89.31" gradientTransform="translate(-13.21 -20) scale(0.97)" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient" cx="99.49" cy="119.94" r="89.31" gradientTransform="translate(2.79 2.79) scale(0.97)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1"/>
     </radialGradient>
@@ -75,39 +12,39 @@
     <radialGradient id="radial-gradient-7" cx="100.72" cy="119.69" r="98.71" xlink:href="#radial-gradient"/>
   </defs>
   <title>victor</title>
-  <g class="cls-1">
+  <g style="isolation: isolate">
     <g id="ACR_1:1" data-name="ACR 1:1">
       <g id="ACube">
-        <polyline id="Outer_Cube" data-name="Outer Cube" class="cls-2" points="167.18 48.42 83.32 0 0 48.42 0.27 48.58 0 144.78 83.86 193.2 83.86 193 83.86 193.2 167.73 144.78 167.45 48.42"/>
-        <polyline id="Inner_Cube" data-name="Inner Cube" class="cls-3" points="153.43 56.37 83.41 15.95 13.85 56.37 14.07 56.51 13.85 136.83 83.86 177.25 83.86 177.08 83.86 177.25 153.88 136.83 153.65 56.37"/>
-        <g id="Right_Shine" data-name="Right Shine" class="cls-4">
-          <g class="cls-1">
-            <polygon class="cls-5" points="83.89 193.21 83.61 96.84 167.47 48.42 167.75 144.78 83.89 193.21"/>
-            <polyline class="cls-6" points="167.47 48.42 83.61 96.84 83.89 193.21 167.75 144.78 167.47 48.42"/>
+        <polyline id="Outer_Cube" data-name="Outer Cube" points="183.18 71.21 99.32 22.8 16 71.21 16.27 71.37 16 167.58 99.86 216 99.86 215.79 99.86 216 183.73 167.58 183.45 71.21" style="fill: #c1272d"/>
+        <polyline id="Inner_Cube" data-name="Inner Cube" points="169.43 79.17 99.41 38.74 29.85 79.17 30.07 79.3 29.85 159.62 99.86 200.05 99.86 199.88 99.86 200.05 169.88 159.62 169.65 79.17" style="fill: #fff;opacity: 0.2"/>
+        <g id="Right_Shine" data-name="Right Shine" style="opacity: 0.75;mix-blend-mode: screen">
+          <g style="isolation: isolate">
+            <polygon points="99.89 216 99.61 119.64 183.47 71.21 183.75 167.58 99.89 216" style="fill: none"/>
+            <polyline points="183.47 71.21 99.61 119.64 99.89 216 183.75 167.58 183.47 71.21" style="fill: url(#radial-gradient)"/>
           </g>
         </g>
-        <g id="Left_Shine" data-name="Left Shine" class="cls-4">
-          <g class="cls-1">
-            <polygon class="cls-7" points="0 144.78 0.27 48.42 84.14 96.84 83.86 193.2 0 144.78"/>
-            <polyline class="cls-8" points="84.14 96.84 0.27 48.42 0 144.78 83.86 193.2 84.14 96.84"/>
+        <g id="Left_Shine" data-name="Left Shine" style="opacity: 0.75;mix-blend-mode: screen">
+          <g style="isolation: isolate">
+            <polygon points="16 167.58 16.27 71.21 100.14 119.63 99.86 216 16 167.58" style="fill: url(#radial-gradient-2)"/>
+            <polyline points="100.14 119.63 16.27 71.21 16 167.58 99.86 216 100.14 119.63" style="fill: url(#radial-gradient-3)"/>
           </g>
         </g>
-        <g id="Top_Shine" data-name="Top Shine" class="cls-9">
-          <g class="cls-1">
-            <polygon class="cls-10" points="0.27 48.42 83.59 0 167.45 48.42 84.14 96.84 0.27 48.42"/>
-            <polyline class="cls-11" points="167.45 48.42 83.59 0 0.27 48.42 84.14 96.84 167.45 48.42"/>
+        <g id="Top_Shine" data-name="Top Shine" style="mix-blend-mode: screen">
+          <g style="isolation: isolate">
+            <polygon points="16.27 71.21 99.59 22.8 183.45 71.21 100.14 119.63 16.27 71.21" style="fill: url(#radial-gradient-4)"/>
+            <polyline points="183.45 71.21 99.59 22.8 16.27 71.21 100.14 119.63 183.45 71.21" style="fill: url(#radial-gradient-5)"/>
           </g>
         </g>
-        <g id="Front_Edge" data-name="Front Edge" class="cls-9">
-          <polygon class="cls-12" points="85.38 192.49 85.38 94.63 82.9 94.63 82.9 192.49 84.14 193.2 85.38 192.49"/>
+        <g id="Front_Edge" data-name="Front Edge" style="mix-blend-mode: screen">
+          <polygon points="101.38 215.28 101.38 117.43 98.9 117.43 98.9 215.28 100.14 216 101.38 215.28" style="fill: url(#radial-gradient-6)"/>
         </g>
-        <g id="Top_Corner" data-name="Top Corner" class="cls-9">
-          <polygon class="cls-13" points="83.89 93.97 2.3 46.86 0.02 48.18 83.89 96.6 167.2 48.18 164.93 46.87 83.89 93.97"/>
+        <g id="Top_Corner" data-name="Top Corner" style="mix-blend-mode: screen">
+          <polygon points="99.89 116.76 18.3 69.66 16.02 70.98 99.89 119.4 183.2 70.98 180.93 69.66 99.89 116.76" style="fill: url(#radial-gradient-7)"/>
         </g>
       </g>
       <g>
-        <polygon class="cls-14" points="230 145.41 178.8 145.41 178.8 94.2 153.2 94.2 153.2 145.41 102 145.41 102 171 153.2 171 153.2 222.21 178.8 222.21 178.8 171 230 171 230 145.41"/>
-        <polygon class="cls-15" points="230 145.41 178.8 145.41 178.8 94.2 153.2 94.2 153.2 145.41 102 145.41 102 171 153.2 171 153.2 222.21 178.8 222.21 178.8 171 230 171 230 145.41"/>
+        <polygon points="246 168.2 194.8 168.2 194.8 117 169.2 117 169.2 168.2 118 168.2 118 193.8 169.2 193.8 169.2 245 194.8 245 194.8 193.8 246 193.8 246 168.2" style="fill: #8cc63f"/>
+        <polygon points="246 168.2 194.8 168.2 194.8 117 169.2 117 169.2 168.2 118 168.2 118 193.8 169.2 193.8 169.2 245 194.8 245 194.8 193.8 246 193.8 246 168.2" style="fill: none;stroke: #39b54a;stroke-width: 5px"/>
       </g>
     </g>
   </g>
