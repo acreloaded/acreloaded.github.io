@@ -1,14 +1,14 @@
 /* global $ */
 
-var mode = 0
-var muts = 0
+let mode = 0
+let muts = 0
 
-var GSP_START = 15
-var GSP_NUM = 1
-var NUM_MUTS = 16
-var MUT_ALL = (1 << (NUM_MUTS + 1)) - 1
+const GSP_START = 15
+const GSP_NUM = 1
+const NUM_MUTS = 16
+const MUT_ALL = (1 << (NUM_MUTS + 1)) - 1
 
-var MODES = [
+const MODES = [
   ['demo', 'gsp1'],
   ['coopedit', 'gsp1'],
   ['deathmatch', 'survivor'],
@@ -25,14 +25,14 @@ function updateMode () {
   $('#mode').val(mode)
   $('.btn-acr-mode').removeClass('active')
   $('#mode' + mode).addClass('active')
-  for (var i = 0; i < GSP_NUM; ++i) {
+  for (let i = 0; i < GSP_NUM; ++i) {
     $('#mut' + (GSP_START + i)).text(MODES[mode][1 + i])
   }
 }
 
 function updateMutators () {
   $('#mut').val(muts)
-  for (var i = 0; i < NUM_MUTS; ++i) {
+  for (let i = 0; i < NUM_MUTS; ++i) {
     $('#mut' + i).toggleClass('active', !!(muts & (1 << i)))
   }
 }
@@ -44,7 +44,7 @@ $(function () {
     if (mode < 0) mode += MODES.length
     updateMode()
   })
-  for (var i = 0; i < MODES.length; ++i) {
+  for (let i = 0; i < MODES.length; ++i) {
     (function (i) {
       $('#mode' + i)
         .text(MODES[i][0])
@@ -59,7 +59,7 @@ $(function () {
     muts = $('#mut').val() & MUT_ALL
     updateMutators()
   })
-  for (i = 0; i < NUM_MUTS; ++i) {
+  for (let i = 0; i < NUM_MUTS; ++i) {
     (function ($b, flag) {
       $b.click(function () {
         muts ^= flag
