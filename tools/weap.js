@@ -105,6 +105,11 @@ function formatAmmo (ammoStart, ammoAdd, ammoMax) {
   return `${ammoAdd}/${ammoStart}/${ammoMax}`
 }
 
+function isMelee (w) {
+  // g == GUN_KNIFE || g == GUN_SWORD
+  return !w || w === 10
+}
+
 $(function () {
   const $mult = $('#mult')
   for (const m of muls) {
@@ -144,8 +149,8 @@ $(function () {
         .append($('<td>').text(attackdelay))
         .append($('<td>').text((60000 / attackdelay).toFixed(2)))
         .append($('<td>').text(isauto ? 'Yes' : 'No'))
-        .append($('<td>').text(i ? formatMag(addsize, magsize) : 'N/A'))
-        .append($('<td>').text(i ? formatAmmo(ammoStart, ammoAdd, ammoMax) : 'unlimited'))
+        .append($('<td>').text(isMelee(i) ? 'N/A' : formatMag(addsize, magsize)))
+        .append($('<td>').text(isMelee(i) ? 'unlimited' : formatAmmo(ammoStart, ammoAdd, ammoMax)))
         .append($('<td>').text(reloadtime / 1000))
         .append($('<td>').text(baseDPS.toFixed(2)))
         .append($('<td>').text(shotsToKill.toFixed(1)))
