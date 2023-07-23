@@ -1,2 +1,0 @@
-User-agent: *
-Disallow: /rofl-you-should-not-be-reading-this-you-noob-hacker-lol-xD
