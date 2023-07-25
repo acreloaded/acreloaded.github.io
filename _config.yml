@@ -5,4 +5,4 @@ defaults:
       type: "pages"
     values:
       layout: "pages"
-edit_prefix: https://github.com/acreloaded/acreloaded.github.io/blob/master/
+edit_prefix: https://github.com/acreloaded/acreloaded.github.io/blob/main/
