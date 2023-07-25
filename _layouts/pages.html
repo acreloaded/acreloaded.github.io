@@ -28,7 +28,7 @@
   </header>
 
   {% unless page.url == '/' %}
-  <div class="container">
+  <div class="container py-3">
   {% endunless %}
     {{ content }}
 
@@ -57,8 +57,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="{{ site.baseurl }}/assets/jquery/jquery-3.3.1.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/jquery/jquery-3.7.0.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="{{ site.baseurl }}/assets/jquery/jquery.timeago.min.js"></script>
   <script src="{{ site.baseurl }}/assets/acr/global.js"></script>
   {% if page.url == '/' %}

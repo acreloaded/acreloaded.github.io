@@ -9,7 +9,7 @@ sections:
       - name: AC 1.1 Map Support
         text: ACR supports v8 maps from AC.
     columns: 2
-  - heading: Improvements <small>why ACR is better</small>
+  - heading: Improvements <small class="fs-3 text-muted">why ACR is better</small>
     content:
       - name: New, diverse game modes and mutators
         text: Combining modes and mutators leads to many more possible game settings
@@ -38,6 +38,7 @@ sections:
       - name: Chat improvements
         text: separate chat and main consoles, unlike in AC, where many kill messages can hide the chat.
         class: col-sm-6 col-md-3
+    columns: 3
   - heading: Promotion Packages
     content:
       - name: Promotion Server
@@ -46,8 +47,8 @@ sections:
         text: Play AC to promote ACR.
     columns: 2
 ---
-<div class="jumbotron">
-  <h1>ACR <small class="text-muted">the replacement for AC</small></h1>
+<div class="p-5 bg-body-secondary">
+  <h1 class="display-1 pb-3 mb-3 my-4 border-bottom">ACR <small class="text-muted">the replacement for AC</small></h1>
   <div>
     <p>AssaultCube Reloaded (ACR) is an improved version of AssaultCube (AC).</p>
     <a href="." role="button" class="btn btn-primary">Get ACR now!</a>
@@ -57,13 +58,20 @@ sections:
 </div>
 
 {% for s in page.sections %}
-<h1>{{ s.heading }}</h1>
-<div class="card-columns"{% if s.columns %} style="column-count:{{ s.columns }}"{% endif %}>
+<h1 class="display-3 pb-3 mb-3 my-4 border-bottom">{{ s.heading }}</h1>
+<div class="row" data-masonry='{"percentPosition": true }'>
   {% for c in s.content %}
-  <div class="card">
-    <div class="card-header">{{ c.name }}</div>
-    <div class="card-body"> {{ c.text }}</div>
+  <div class="col{% if s.columns %}-{{ 12 | divided_by: s.columns }}{% endif %}">
+    <div class="card mb-3">
+      <div class="card-header">{{ c.name }}</div>
+      <div class="card-body"> {{ c.text }}</div>
+    </div>
   </div>
   {% endfor %}
 </div>
 {% endfor %}
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4/dist/masonry.pkgd.min.js"
+  integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+  crossorigin="anonymous"
+  async></script>
