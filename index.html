@@ -29,7 +29,6 @@ screenshots:
         <a href="https://sourceforge.net/projects/assaultcuber/files" role="button" class="btn btn-primary w-100">SourceForge</a>
         <a href="https://www.moddb.com/games/acreloaded/downloads" role="button" class="btn btn-secondary w-100">Mod DB</a>
         <a href="https://www.indiedb.com/games/acreloaded/downloads" role="button" class="btn btn-secondary w-100">Indie DB</a>
-        <a href="https://www.majorgeeks.com/files/details/assaultcube.html" role="button" class="btn btn-secondary w-100">MajorGeeks</a>
       </div>
       <br>
       <div class="d-grid">
@@ -143,9 +142,9 @@ screenshots:
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   // Check latest version
-  $.getJSON('https://api.github.com/repos/acreloaded/acr/releases/latest?callback=?', function (data) {
+  $.getJSON('https://api.github.com/repos/acreloaded/acr/releases/latest', function (data) {
     var latest = data.data.name
-    if (latest.substr(0, 8) === 'Release ') latest = latest.substr(8)
+    if (latest.slice(0, 8) === 'Release ') latest = latest.slice(8)
     $('#latest-version').text('ACR ' + latest)
   })
 })
