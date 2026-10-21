@@ -1,5 +1,3 @@
-/* global $ */
-
 function bvec (r, g, b) {
   return 'rgb(' + r + ',' + g + ',' + b + ')'
 }
@@ -63,9 +61,9 @@ function getColor (c) {
 }
 
 function updatePreview () {
-  const $stuff = $('<div>')
+  const $stuff = document.createElement('div')
 
-  const parts = ('_' + $('#txt').val()).split('\\')
+  const parts = ('_' + document.getElementById('txt').value).split('\\')
   const stack = [['f5', false]]
   let sp = 0
   for (let i = 0, l = parts.length; i < l; ++i) {
@@ -74,7 +72,7 @@ function updatePreview () {
     let c = parts[i][0]
     let codeLen = 1
     if (c === 'n') {
-      $stuff.append($('<br>'))
+      $stuff.append(document.createElement('br'))
       continue
     } else if (c === 'f') {
       if (parts[i].length === 1) continue
@@ -101,20 +99,22 @@ function updatePreview () {
     const color = getColor(stack[sp][0])
     const blinking = stack[sp][1]
 
-    const $s = $('<span>')
-      .text(text)
-      .css('color', color)
+    const $s = document.createElement('span')
+    $s.textContent = text
+    $s.style.color = color
     if (blinking) {
-      $s.addClass('b')
+      $s.classList.add('b')
     }
     $stuff.append($s)
   }
 
-  $('#preview').empty().append($stuff)
+  document.getElementById('preview').replaceChildren($stuff)
 }
 
-$(function () {
+document.addEventListener('DOMContentLoaded', function () {
+  const $txt = document.getElementById('txt')
   // register event listener
-  $('#txt').on('change keyup', updatePreview)
+  $txt.addEventListener('change', updatePreview)
+  $txt.addEventListener('keyup', updatePreview)
   updatePreview()
 })

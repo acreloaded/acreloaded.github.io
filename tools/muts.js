@@ -1,5 +1,3 @@
-/* global $ */
-
 let mode = 0
 let muts = 0
 
@@ -22,52 +20,56 @@ const MODES = [
 ]
 
 function updateMode () {
-  $('#mode').val(mode)
-  $('.btn-acr-mode').removeClass('active')
-  $('#mode' + mode).addClass('active')
+  document.getElementById('mode').value = mode
+  for (const $button of document.querySelectorAll('.btn-acr-mode')) {
+    $button.classList.remove('active')
+  }
+  document.getElementById('mode' + mode).classList.add('active')
   for (let i = 0; i < GSP_NUM; ++i) {
-    $('#mut' + (GSP_START + i)).text(MODES[mode][1 + i])
+    document.getElementById('mut' + (GSP_START + i)).textContent = MODES[mode][1 + i]
   }
 }
 
 function updateMutators () {
-  $('#mut').val(muts)
+  document.getElementById('mut').value = muts
   for (let i = 0; i < NUM_MUTS; ++i) {
-    $('#mut' + i).toggleClass('active', !!(muts & (1 << i)))
+    document.getElementById('mut' + i).classList.toggle('active', !!(muts & (1 << i)))
   }
 }
 
-$(function () {
+document.addEventListener('DOMContentLoaded', function () {
+  const $mode = document.getElementById('mode')
+  const $mut = document.getElementById('mut')
+
   // modes
-  $('#mode').change(function () {
-    mode = $('#mode').val() % MODES.length
+  $mode.addEventListener('change', function () {
+    mode = $mode.value % MODES.length
     if (mode < 0) mode += MODES.length
     updateMode()
   })
   for (let i = 0; i < MODES.length; ++i) {
-    (function (i) {
-      $('#mode' + i)
-        .text(MODES[i][0])
-        .click(function () {
-          mode = i
-          updateMode()
-        })
-    })(i)
+    const button = document.getElementById('mode' + i)
+    button.textContent = MODES[i][0]
+    button.addEventListener('click', function () {
+      mode = i
+      updateMode()
+    })
   }
   // mutators
-  $('#mut').change(function () {
-    muts = $('#mut').val() & MUT_ALL
+  $mut.addEventListener('change', function () {
+    muts = $mut.value & MUT_ALL
     updateMutators()
   })
   for (let i = 0; i < NUM_MUTS; ++i) {
-    (function ($b, flag) {
-      $b.click(function () {
-        muts ^= flag
-        updateMutators()
-      })
-    })($('#mut' + i), (1 << i))
+    const $button = document.getElementById('mut' + i)
+    const flag = 1 << i
+    $button.addEventListener('click', function () {
+      muts ^= flag
+      updateMutators()
+    })
   }
 
   // default mode
-  $('#mode2').click()
+  mode = 2
+  updateMode()
 })

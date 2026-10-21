@@ -1,5 +1,3 @@
-/* global $ */
-
 const NUMGUNS = 19
 
 // enum from /acr/source/src/entity.h
@@ -110,28 +108,30 @@ function isMelee (w) {
   return !w || w === 10
 }
 
-$(function () {
-  const $mult = $('#mult')
+function appendRow (target, values) {
+  const row = document.createElement('tr')
+  for (const value of values) {
+    row.insertCell().textContent = value
+  }
+  target.tBodies[0].append(row)
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const $mult = document.getElementById('mult')
   for (const m of muls) {
-    $mult.append(
-      $('<tr>')
-        .append($('<td>').text(m[3]))
-        .append($('<td>').text(m[2]))
-        .append($('<td>').text(m[1]))
-        .append($('<td>').text(m[0]))
-    )
+    appendRow($mult, m.slice().reverse())
   }
 
-  const $weapStats = $('#weapStats')
+  const $weapStats = document.getElementById('weapStats')
   for (let i = 0; i < NUMGUNS; i++) {
     const name = weapnames[i]
     const [ammoStart, ammoAdd, ammoMax] = ammostats[i]
     const [
-      modelname, reloadtime, attackdelay,
+      _modelname, reloadtime, attackdelay,
       damage, range, endrange, rangesub, piercing,
       spread, spreadrem, kick,
       addsize, magsize,
-      mdl_kick_rot, mdl_kick_back,
+      _mdl_kick_rot, _mdl_kick_back,
       recoil, maxrecoil, recoilbackfade, recoilangle,
       pushfactor, isauto, mulset
     ] = guns[i]
@@ -141,30 +141,29 @@ $(function () {
     const baseDPS = baseDamage * 1000 / attackdelay
     const shotsToKill = 100 / baseDamage
     const timeToKill = (Math.ceil(shotsToKill) - 1) * attackdelay / 1000
-    $weapStats.append(
-      $('<tr>')
-        .append($('<td>').text(name))
-        .append($('<td>').text(formatDamage(damage, rangesub)))
-        .append($('<td>').text(formatRange(range, endrange)))
-        .append($('<td>').text(attackdelay))
-        .append($('<td>').text((60000 / attackdelay).toFixed(2)))
-        .append($('<td>').text(isauto ? 'Yes' : 'No'))
-        .append($('<td>').text(isMelee(i) ? 'N/A' : formatMag(addsize, magsize)))
-        .append($('<td>').text(isMelee(i) ? 'unlimited' : formatAmmo(ammoStart, ammoAdd, ammoMax)))
-        .append($('<td>').text(reloadtime / 1000))
-        .append($('<td>').text(baseDPS.toFixed(2)))
-        .append($('<td>').text(shotsToKill.toFixed(1)))
-        .append($('<td>').text(timeToKill.toFixed(3)))
-        .append($('<td>').text(mul[3]))
-        .append($('<td>').text(piercing))
-        .append($('<td>').text(spread))
-        .append($('<td>').text(spreadrem))
-        .append($('<td>').text(kick))
-        .append($('<td>').text(recoil))
-        .append($('<td>').text(maxrecoil))
-        .append($('<td>').text(recoilbackfade))
-        .append($('<td>').text(recoilangle))
-        .append($('<td>').text(pushfactor))
-    )
+    appendRow($weapStats, [
+      name,
+      formatDamage(damage, rangesub),
+      formatRange(range, endrange),
+      attackdelay,
+      (60000 / attackdelay).toFixed(2),
+      isauto ? 'Yes' : 'No',
+      isMelee(i) ? 'N/A' : formatMag(addsize, magsize),
+      isMelee(i) ? 'unlimited' : formatAmmo(ammoStart, ammoAdd, ammoMax),
+      reloadtime / 1000,
+      baseDPS.toFixed(2),
+      shotsToKill.toFixed(1),
+      timeToKill.toFixed(3),
+      mul[3],
+      piercing,
+      spread,
+      spreadrem,
+      kick,
+      recoil,
+      maxrecoil,
+      recoilbackfade,
+      recoilangle,
+      pushfactor,
+    ])
   }
 })

@@ -46,7 +46,7 @@
         <span class="text-muted">
           Run by <a href="https://victorz.ca"><img src="//victorz.ca/assets/a/80-15.png" alt="Victor"/></a>,
           this site was last generated
-          <span class="timeago" title="{{ site.time | date_to_xmlschema }}">{{ site.time }}</span>.
+          <time class="timeago" datetime="{{ site.time | date_to_xmlschema }}">on {{ site.time | date: "%A, %Y %B %d" }} at {{ site.time | date: "%I:%M %p %Z" }}</time>.
           It uses <a href="https://validator.w3.org/check?uri=referer">HTML 5</a> and
           <a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS 3</a>.
         </span>
@@ -57,9 +57,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="{{ site.baseurl }}/assets/jquery/jquery-3.7.1.min.js"></script>
   <script src="{{ site.baseurl }}/assets/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/jquery/jquery.timeago.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/timeago.min.js"></script>
   <script src="{{ site.baseurl }}/assets/acr/global.js"></script>
   {% if page.url == '/' %}
   <script type="text/javascript">
